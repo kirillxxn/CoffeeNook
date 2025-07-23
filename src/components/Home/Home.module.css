@@ -1,0 +1,32 @@
+.home__page {
+	position: relative;
+	padding: 20px 50px;
+}
+.home__page-title {
+	display: inline-block;
+	transform: rotateZ(-10deg);
+	font-family: 'Caveat';
+	font-size: 4.9rem;
+	color: #fff2cc;
+	text-align: left;
+	z-index: 1;
+}
+.home__page-subtitle {
+	margin-top: 80px;
+	max-width: 800px;
+	text-align: center;
+	border-radius: 40px;
+	padding: 20px;
+	font-size: 2.4rem;
+	font-family: 'Caveat';
+	color: #fff2cc;
+	z-index: 1;
+}
+.coffee_beans {
+	position: absolute;
+	top: 0;
+	left: 40px;
+	width: 50%;
+
+	z-index: -1;
+}

@@ -1,5 +1,88 @@
-.header {
-}
-.header-container {
+.header__container {
 	display: flex;
+	padding: 10px 20px;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	backdrop-filter: blur(30px);
+}
+
+.header__nav {
+	font-size: 1.5rem;
+	display: flex;
+}
+
+.header__nav-list {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	gap: 80px;
+	align-items: center;
+}
+
+.header__logo {
+	font-family: 'Princess';
+	color: #fff2cc;
+	font-size: 3rem;
+}
+.header__logo-coffee {
+	display: inline-block;
+	transform: rotateZ(-10deg);
+}
+.header__logo-nook {
+	color: chocolate;
+	display: inline-block;
+	transform: translateY(20px) translateX(-20px);
+}
+
+.header__nav-link {
+	font-size: 1.5rem;
+	color: #fff2cc;
+	font-family: 'Pacifico';
+	text-decoration: none;
+	line-height: 0;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+.header__icon {
+	width: 45px;
+	height: 45px;
+}
+.header__nav-link:hover {
+	opacity: 0.3;
+	.header__icon {
+		transform: scale(1.2);
+	}
+}
+.button__profile {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+.button__basket {
+	position: relative;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 1;
+}
+.basket__count {
+	position: absolute;
+	display: inline-block;
+	right: 0;
+	top: 0;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: white;
+	color: black;
+	font-size: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }

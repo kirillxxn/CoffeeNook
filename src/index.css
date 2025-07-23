@@ -1,114 +1,100 @@
-/* Reset and base styles  */
-* {
-	padding: 0px;
-	margin: 0 auto;
-	border: none;
-}
-
 *,
-*::before,
-*::after {
-	box-sizing: border-box;
+::before,
+::after {
+	box-sizing: border-box; /* Применение единого способа расчёта размеров */
 }
 
-/* Links */
-
-a,
-a:link,
-a:visited {
-	text-decoration: none;
+html {
+	line-height: 1.15; /* Поддерживает доступность чтения текста */
+	-webkit-text-size-adjust: 100%; /* Запрещает масштабирование текста мобильными устройствами */
+}
+body {
+	width: 100%;
+	margin: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+		sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+	background-image: url(/src/assets/backgrounds/backgroundhome.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
-a:hover {
-	text-decoration: none;
-}
-
-/* Common */
-
-aside,
-nav,
-footer,
-header,
-section,
-main {
-	display: block;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p {
-	font-size: inherit;
-	font-weight: inherit;
+	margin-top: 0; /* Убираем верхний отступ абзацев */
 }
 
-ul,
-ul li {
-	list-style: none;
+hr {
+	box-sizing: content-box; /* Восстанавливаем поведение горизонтальной линии */
+	height: 0; /* Убираем видимость границы */
+	overflow: visible; /* Нормализуем вертикальную прокрутку */
+}
+
+pre {
+	font-family: monospace, monospace; /* Моноширинный шрифт */
+	font-size: 1em; /* Сохраняем стандартный размер шрифта */
+}
+
+a {
+	color: inherit; /* Наследуем родительский цвет текста */
+	text-decoration: underline; /* Оставляем подчёркивание ссылок */
 }
 
 img {
-	vertical-align: top;
+	border-style: none; /* Сброс рамки изображений */
 }
 
-img,
 svg {
-	max-width: 100%;
-	height: auto;
+	fill: currentColor; /* По умолчанию используем текущий цвет */
 }
 
-address {
-	font-style: normal;
+video {
+	max-width: 100%; /* Ограничиваем максимальное разрешение видео */
+	height: auto; /* Высота адаптируется автоматически */
 }
-
-/* Form */
 
 input,
-textarea,
-button,
-select {
-	font-family: inherit;
-	font-size: inherit;
-	color: inherit;
-	background-color: transparent;
-}
-
-input::-ms-clear {
-	display: none;
+select,
+textarea {
+	font-family: inherit; /* Применяем родственный шрифт */
+	font-size: inherit; /* Применяем тот же размер шрифта */
+	line-height: inherit; /* Применяем одинаковый межстрочный интервал */
 }
 
 button,
-input[type='submit'] {
-	display: inline-block;
-	box-shadow: none;
-	background-color: transparent;
-	background: none;
-	cursor: pointer;
+input,
+optgroup,
+select,
+textarea {
+	margin: 0; /* Убираем внешние отступы */
+	font-family: inherit; /* Применяем родственный шрифт */
+	font-size: 100%; /* Применяем тот же размер шрифта */
+	line-height: inherit; /* Применяем одинаковый межстрочный интервал */
+	color: inherit; /* Применяем тот же цвет текста */
 }
 
-input:focus,
-input:active,
-button:focus,
-button:active {
-	outline: none;
+/* Убираем анимацию при фокусировке */
+:focus-visible {
+	outline-offset: 2px;
+	outline: 2px solid rgba(0, 0, 0, 0.5); /* Видимая граница фокуса */
 }
 
-button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
+/* Медиа запросы */
+@media print {
+	*,
+	::before,
+	::after {
+		text-shadow: none !important; /* Отключаем тени текста при печати */
+		box-shadow: none !important; /* Отключаем тени при печати */
+	}
 }
 
-label {
-	cursor: pointer;
-}
-
-legend {
-	display: block;
-}
-
-input[type='file'] {
-	max-width: 100%;
+@supports (-ms-accelerator: true) {
+	input::-ms-clear,
+	input::-ms-reveal {
+		display: none; /* Скрываем ненужные элементы IE/Edge */
+	}
 }

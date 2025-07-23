@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'Pacifico';
+	src: url('./Pacifico-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Princess';
+	src: url('./PrincessSofia-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Caveat';
+	src: url('./Caveat-VariableFont_wght.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
