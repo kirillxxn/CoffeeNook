@@ -25,6 +25,7 @@ const Menu = () => {
 										className={styles['menu__item-image']}
 										src={item.image}
 										alt={item.name}
+										loading='lazy'
 									/>
 								)}
 							</a>

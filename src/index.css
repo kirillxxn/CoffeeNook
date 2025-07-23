@@ -1,12 +1,12 @@
 *,
 ::before,
 ::after {
-	box-sizing: border-box; /* Применение единого способа расчёта размеров */
+	box-sizing: border-box;
 }
 
 html {
-	line-height: 1.15; /* Поддерживает доступность чтения текста */
-	-webkit-text-size-adjust: 100%; /* Запрещает масштабирование текста мобильными устройствами */
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
 }
 body {
 	width: 100%;
@@ -17,51 +17,51 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	color: #333;
-	background-image: url(/src/assets/backgrounds/backgroundhome.png);
+	background-image: url(/src/assets/background/background.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 }
 
 p {
-	margin-top: 0; /* Убираем верхний отступ абзацев */
+	margin-top: 0;
 }
 
 hr {
-	box-sizing: content-box; /* Восстанавливаем поведение горизонтальной линии */
-	height: 0; /* Убираем видимость границы */
-	overflow: visible; /* Нормализуем вертикальную прокрутку */
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
 }
 
 pre {
-	font-family: monospace, monospace; /* Моноширинный шрифт */
-	font-size: 1em; /* Сохраняем стандартный размер шрифта */
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
 
 a {
-	color: inherit; /* Наследуем родительский цвет текста */
-	text-decoration: underline; /* Оставляем подчёркивание ссылок */
+	color: inherit;
+	text-decoration: underline;
 }
 
 img {
-	border-style: none; /* Сброс рамки изображений */
+	border-style: none;
 }
 
 svg {
-	fill: currentColor; /* По умолчанию используем текущий цвет */
+	fill: currentColor;
 }
 
 video {
-	max-width: 100%; /* Ограничиваем максимальное разрешение видео */
-	height: auto; /* Высота адаптируется автоматически */
+	max-width: 100%;
+	height: auto;
 }
 
 input,
 select,
 textarea {
-	font-family: inherit; /* Применяем родственный шрифт */
-	font-size: inherit; /* Применяем тот же размер шрифта */
-	line-height: inherit; /* Применяем одинаковый межстрочный интервал */
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 button,
@@ -69,32 +69,30 @@ input,
 optgroup,
 select,
 textarea {
-	margin: 0; /* Убираем внешние отступы */
-	font-family: inherit; /* Применяем родственный шрифт */
-	font-size: 100%; /* Применяем тот же размер шрифта */
-	line-height: inherit; /* Применяем одинаковый межстрочный интервал */
-	color: inherit; /* Применяем тот же цвет текста */
+	margin: 0;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: inherit;
+	color: inherit;
 }
 
-/* Убираем анимацию при фокусировке */
 :focus-visible {
 	outline-offset: 2px;
-	outline: 2px solid rgba(0, 0, 0, 0.5); /* Видимая граница фокуса */
+	outline: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-/* Медиа запросы */
 @media print {
 	*,
 	::before,
 	::after {
-		text-shadow: none !important; /* Отключаем тени текста при печати */
-		box-shadow: none !important; /* Отключаем тени при печати */
+		text-shadow: none !important;
+		box-shadow: none !important;
 	}
 }
 
 @supports (-ms-accelerator: true) {
 	input::-ms-clear,
 	input::-ms-reveal {
-		display: none; /* Скрываем ненужные элементы IE/Edge */
+		display: none;
 	}
 }
