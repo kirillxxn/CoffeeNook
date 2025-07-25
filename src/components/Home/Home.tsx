@@ -25,6 +25,7 @@ const Home = () => {
 					Погрузитесь в мир насыщенных ароматов и утонченных <br />
 					вкусов настоящего кофе вместе с нами!
 				</p>
+
 				<img
 					className={style['coffee_beans']}
 					src='/src/assets/icons/coffeebeans.png'

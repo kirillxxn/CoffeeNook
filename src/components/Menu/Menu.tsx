@@ -1,18 +1,27 @@
 import styles from './Menu.module.css'
 import MenuList from './MenuList'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Fancybox as FancyboxLib } from '@fancyapps/ui'
 import '@fancyapps/ui/dist/fancybox/fancybox.css'
 const Menu = () => {
+	const [showNotification, setSnowNotification] = useState<boolean>(false)
 	useEffect(() => {
 		FancyboxLib.bind("[data-fancybox='gallery']", {})
 		return () => {
 			FancyboxLib.unbind("[data-fancybox='gallery']")
 		}
 	}, [])
-
+	const handleSnowNotification = () => {
+		setSnowNotification(true)
+		setTimeout(() => {
+			setSnowNotification(false)
+		}, 2000)
+	}
 	return (
 		<div className={styles['menu__page']}>
+			{showNotification && (
+				<div className={styles['notification']}>В корзине</div>
+			)}
 			<nav className={styles['menu']}>
 				<ul className={styles['menu__list']}>
 					{MenuList.map(item => (
@@ -33,10 +42,12 @@ const Menu = () => {
 								{item.description}
 							</p>
 							<button
-								className={`${styles['menu__item-button']} ${styles['item__button-custom']}`}
+								onClick={handleSnowNotification}
+								className={styles['menu__item-button']}
 							>
-								<span>Купить</span>
-								<span>{item.price} ₽</span>
+								<span className={styles['item__button-text']}>
+									{item.price} ₽
+								</span>
 							</button>
 						</li>
 					))}
